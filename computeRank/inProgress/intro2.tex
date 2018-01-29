@@ -1,0 +1,39 @@
+\section{Introduction}
+Understanding customers is crucial to Amazon's business. This includes identifying customers' interests, purchase patterns and demographics to improve customer experience. Amazon has a huge customer base with rich amount of data on customer purchases, subscriptions, product reviews, etc. However it has limited access to the customer demographics, e.g., age, gender, income, etc. Recently there has been interest on inferring the demographic information for the account holder. However, as multiple persons usually use the same account to buy products, inferring just the account holder's demographics seems to be sub-optimal. 
+In this work, we intend to discover the demographics of all persons who are using the same account. 
+For simplicity, we focus on discovering whether there is a member of a specific age group present in the household.
+The six age ranges in consideration are : 18-24, 25-34, 35-44, 45-54, 55-64 and above 65.
+Knowing the age composition of a complete household helps improving the quality of recommendation and targeting, e.g., knowing that there is a baby (or young adult) in a household helps targeting for diaper (or back to college) subscription.
+
+There are multiple \textit{challenges} involved in discovering age composition of a household.
+\begin{itemize}
+\item \textit{Low discrimination in purchases:} 
+Most of the products are being purchased by people across different age groups and the number of products specific to some age group (e.g., people older than 65) is significantly small. This reduces the signal to noise ratio, making it difficult to learn a predictive model. 
+%The fraction of purchases deterministic to some demographic age group is very small e.g. the number of products specific to people older than 65 is significantly low. 
+\item \textit{Noise in purchases:} Significant number of purchases from an account are for members outside the household. This has been observed from an analysis based on the household data (obtained by Kindle) \footnote{\label{note1}To see more about the dataset please see section ~\ref{sec:experiments}}.
+\item \textit{Label Noise:} To the best of our knowledge, there is no dataset inside Amazon containing the complete age composition of households. The household data obtained by the Kindle team is partially labelled. Also, the account holder's age present in Experian is 63\% accurate $^{1}$. 
+\end{itemize}
+
+%These make the learning of a supervised model to predict household age composition more challenging. 
+We address these challenges by discussing and experimenting with a bag of supervised techniques to predict household age composition. Formally we make the following contributions.
+%\textbf{Contributions:}
+\begin{itemize}
+\item The issue of \textit{low purchase discrimination} mainly arises due to the small number of predictive ASINs compared to the total number of ASINs. To address this we don't use the purchased ASINs directly in our modeling. Rather we obtain the title and brand names of the ASINs purchased (along with other features) and process them through a mutual information based feature selection to identify title and brand words most deterministic of age bands. This approach improves the signal to noise ratio helping to build better models.
+%In this way, we improve the signal to noise ratio that can help in building better models.
+%\item We see that unsupervised clustering of the accounts leads to clusters with common interests e.g. photography or sports (along with many spurious/un-identifiable clusters). This indicates that the purchase behavior is naturally inclined towards interests rather than demographics and to model demographics supervision is necessary. We model the prediction of household age composition task as a supervised multilabel classification problem.
+\item It is intuitive that the distribution of household compositions is not uniform, i.e., certain household compositions are more frequent than others, e.g., [25-34, 35-44] is more likely than [18-24, 35-44] . This hints that the labels are considerably correlated and to model the correlation we explore Conditional Bernoulli mixture model (CBM) \cite{li2016conditional} which is a multi-label classification algorithm handling label correlations.
+%
+\item Due to the unavailability of high quality household data, we train our models on account holder age labels of single households from Experian. To handle the noise in these labels we use XGBoost and demonstrate its robustness via thoroughly designed experiments. In an effort to obtain high quality labels, we experiment with various matching criteria used to match the data from Experian with Amazon customers. We observe that the label noise is partly induced from the matching operation and models perform better when trained with customers matched with stronger criteria.
+%
+\item To investigate the effect of noisy purchases, we experiment with low rank representations (SVD) and provide useful insights. 
+\item To demonstrate the efficacy of the methods we conducted rigorous experiments in predicting the household age composition. A variant of our model predicts the account holder age group of customers and is used by more than 20 teams inside Amazon through the Bullseye platform.
+\end{itemize}
+
+In Section ~\ref{sec:approaches}, we discuss different approaches in modeling the household prediction including algorithms handling label correlations. We present various types of experiments to show the efficacy of the models in predicting household age composition with a thorough analysis of the predictions in Section ~\ref{sec:experiments}. 
+%A brief concluding remarks with potential future directions is presented in Section ~\ref{sec:conclusion}. 
+
+
+
+
+
+

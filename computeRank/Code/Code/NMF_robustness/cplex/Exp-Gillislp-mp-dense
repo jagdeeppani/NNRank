@@ -1,0 +1,35 @@
+---------------------------------
+Un-normalized TSVD vs other methods (middle point/dense Noise) 
+---------------------------------
+Experiment shows Robustness of methods over noise.
+Dataset: Synthetic (generated according to Gillis-LP paper) 
+
+Matrix of size: m x n with m = 100 and n = 50, k=10 
+(LP by Gillis is not scalable. Goal is towards robustness. For a efficent LP solving hlpk is used)
+
+
+
+(Synthetic dataset is generated such that A=M*W+N and norm(N,1)<= noise level, where norm(N,1)=(max(sum(abs(N))))). sum is the columnwise sum. (Remember the assumption is Columns of A are documents)
+
+Un-normalized TSVD: 
+*********************
+
+Columns are assumed to be documents. Model A = M * W
+A: data matrix of size m x n
+M: matrix of size m x k
+W: matrix of size k x n
+Given A, M is found out by TSVD (un-normalized)
+Given A and M, W is found out by Minimzing the l1 error of each column of residual matrix (A-M*W). hlpk is used here for lp. )
+
+
+The error measure (l1 residual norm) is found by solving
+ 1 - min	(|A-M*W|) / |A|
+	W>=0
+ |A| is the norm(A,1)=(max(sum(abs(A)))) . sum is the columnwise sum. (Remember the assumption is Columns of A are documents)
+However to solve the above minimization, I have used solvelp, which minimizes the l1 error of each column of residual matrix.
+
+The measure is an instance from Gillis and luce JMLR 2014 paper(Eq (9) page 18).
+
+The plot shows, how the l1-residual-norm changes with the noise level. 
+
+See plot to see results.

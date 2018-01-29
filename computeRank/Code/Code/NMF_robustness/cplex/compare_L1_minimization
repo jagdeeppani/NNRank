@@ -1,0 +1,3 @@
+clear all;
+close all;
+% compare l1 minimization accuracies of admm and solvelp

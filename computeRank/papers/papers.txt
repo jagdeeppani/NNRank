@@ -1,0 +1,97 @@
+The most closest work I could find is: 
+Scalable methods for nonnegative matrix factorizations of near-separable tall-and-skinny matrices (NIPS14)
+
+The paper talks about NMF where #docs is far more than #words. #words should be small (e.g. 5000). Because the algorithm requires QR factorization and SVD on a matrix of size #words \times #words. 
+
+The method is based on separability assumption. The main idea is to reduce the data matrix (#docs x # words) to a matrix of size (#words x # words), and then apply SPA or XRAY to find extreme rays. 
+The implementation uses hadoop mapreduce framework and the code is available in git.
+
+Datasets:
+Apart from synthetic experiments, two real datasets have been used. Both the datasets are available to public.
+
+Heat transfer simulation data: 4.9 billion datapoints and 64 features. File size 2TB.
+Flow cytometry data: 1.6 billion datapoints and 25 features. File size 345GB.
+
+Both the matrices are structured and the i.i.d assumptions on the datapoints may not hold.
+
+
+Performance metrics:
+Normalized residual error (called Relative error) is used as performance metrics. In addition the quality of the discovered factors and their behavior is discussed via some plots.
+
+
+
+
+
+
+
+
+
+
+
+
+The next closest would be:
+
+Maxios: Large Scale Nonnegative Matrix Factorization for Collaborative Filtering (NIPS14 workshop paper)
+This paper proposed a distributed algorithm to handle large scale sparse data with missing entries. 
+The paper has used Yahoo Music Ratings data and Netflix Movie Ratings.
+
+Yahoo Music Ratings:  1.9M users and 98K artists. 
+Netflix Movie Ratings: 480K users and 17K movies.
+
+Performance metrics: Reconstruction error.
+
+
+NMF_CD -- Fast Coordinate Descent Method for Non-Negative Matrix Factorization
+Dataset: RCV1 - 781K documents, 47K features.
+Metrics: Normalized residual error (called Relative error)
+
+
+New York Times : 1.8M documents, 8000 words. 
+See paper: Bayesian Nonnegative Matrix Factorization with Stochastic Variational Inference
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sparse Approximate Conic Hulls
+NMF_CD -- Fast Coordinate Descent Method for Non-Negative Matrix Factorization
+Robust large-scale non-negative matrix factorization using Proximal Point algorithm
+Random projections for non-negative matrix factorizations
+Recovery Guarantee of Non-negative Matrix Factorization via Alternating Updates
+Orthogonal NMF through Subspace Exploration
+
+Other:
+How to Fake Multiply by a Gaussian Matrix
+https://github.com/Microsoft/ISLE
+Fast Robust Non-Negative Matrix Factorization for Large-Scale Human Action Data Clustering
+New SVD based initialization strategy for Non-negative Matrix Factorization
+Hierarchical non-negative matrix factorization to characterize brain tumor heterogeneity using multi-parametric MRI
+Hierarchical non-negative matrix factorization (hNMF): a tissue pattern differentiation method for glioblastoma multiforme diagnosis using MRSI
+
+
+
+Amazon work:
+Positive-Unlabeled Learning with Non-Negative Risk Estimator
+http://papers.nips.cc/paper/5477-neural-word-embedding-as-implicit-matrix-factorization.pdf
+Speedup Matrix Completion with Side Information: Application to Multi-Label Learning
+Estimating Jaccard Index with Missing Observations: A Matrix Calibration Approach
+
+
+
+
+
+
+
+
+

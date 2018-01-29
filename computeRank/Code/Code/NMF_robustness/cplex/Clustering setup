@@ -1,0 +1,12 @@
+v1:
+When preprocessing(removing numbers and stopwords) and deleting words with frequencies less than 5
+TDT2 works good
+20NG doesn't work good
+
+
+ 
+v2: When preprocessing by just deleting words with frequencies less than 5
+
+
+
+

@@ -1,0 +1,97 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Christopher et~al.(2008)Christopher, Prabhakar, and
+  Hinrich]{christopher2008introduction}
+Christopher, D~Manning, Prabhakar, Raghavan, and Hinrich, SCH{\"U}TZE.
+\newblock Introduction to information retrieval.
+\newblock \emph{An Introduction To Information Retrieval}, 151:\penalty0 177,
+  2008.
+
+\bibitem[Cortes \& Vapnik(1995)Cortes and Vapnik]{cortes1995support}
+Cortes, Corinna and Vapnik, Vladimir.
+\newblock Support-vector networks.
+\newblock \emph{Machine learning}, 20\penalty0 (3):\penalty0 273--297, 1995.
+
+\bibitem[Dembczy{\'n}ski et~al.(2011)Dembczy{\'n}ski, Waegeman, and
+  H{\"u}llermeier]{dembczynski2011joint}
+Dembczy{\'n}ski, Krzysztof, Waegeman, Willem, and H{\"u}llermeier, Eyke.
+\newblock Joint mode estimation in multi-label classification by chaining.
+\newblock In \emph{CoLISD 2011 (Collective Learning and Inference on Structured
+  Data 2011)}, 2011.
+
+\bibitem[Freund et~al.(1996)Freund, Schapire, et~al.]{freund1996experiments}
+Freund, Yoav, Schapire, Robert~E, et~al.
+\newblock Experiments with a new boosting algorithm.
+\newblock In \emph{Icml}, volume~96, pp.\  148--156, 1996.
+
+\bibitem[Koh \& Liang(2017)Koh and Liang]{pmlr-v70-koh17a}
+Koh, Pang~Wei and Liang, Percy.
+\newblock Understanding black-box predictions via influence functions.
+\newblock In Precup, Doina and Teh, Yee~Whye (eds.), \emph{Proceedings of the
+  34th International Conference on Machine Learning}, volume~70 of
+  \emph{Proceedings of Machine Learning Research}, pp.\  1885--1894,
+  International Convention Centre, Sydney, Australia, 06--11 Aug 2017. PMLR.
+
+\bibitem[Kumar et~al.(2012)Kumar, Vembu, Menon, and Elkan]{kumar2012learning}
+Kumar, Abhishek, Vembu, Shankar, Menon, Aditya~Krishna, and Elkan, Charles.
+\newblock Learning and inference in probabilistic classifier chains with beam
+  search.
+\newblock In \emph{Joint European Conference on Machine Learning and Knowledge
+  Discovery in Databases}, pp.\  665--680. Springer, 2012.
+
+\bibitem[LeCun et~al.(2015)LeCun, Bengio, and Hinton]{lecun2015deep}
+LeCun, Yann, Bengio, Yoshua, and Hinton, Geoffrey.
+\newblock Deep learning.
+\newblock \emph{Nature}, 521\penalty0 (7553):\penalty0 436--444, 2015.
+
+\bibitem[Li et~al.(2016)Li, Wang, Pavlu, and Aslam]{li2016conditional}
+Li, Cheng, Wang, Bingyu, Pavlu, Virgil, and Aslam, Javed.
+\newblock Conditional bernoulli mixtures for multi-label classification.
+\newblock In \emph{International Conference on Machine Learning}, pp.\
+  2482--2491, 2016.
+
+\bibitem[Liu \& Tsang(2015)Liu and Tsang]{liu2015optimality}
+Liu, Weiwei and Tsang, Ivor.
+\newblock On the optimality of classifier chain for multi-label classification.
+\newblock In \emph{Advances in Neural Information Processing Systems}, pp.\
+  712--720, 2015.
+
+\bibitem[Mcauliffe \& Blei(2008)Mcauliffe and Blei]{mcauliffe2008supervised}
+Mcauliffe, Jon~D and Blei, David~M.
+\newblock Supervised topic models.
+\newblock In \emph{Advances in neural information processing systems}, 2008.
+
+\bibitem[Pani et~al.(2016)Pani, A, Majumder, Chaoji, Khare, and
+  Rastogi]{pani2016amlc}
+Pani, Jagdeep, A, Pooja, Majumder, Anirban, Chaoji, Vineet, Khare, Vineet, and
+  Rastogi, Rajeev.
+\newblock A generative model to learn household composition of customers.
+\newblock In \emph{Amazon Machine Learning Conference}, 2016.
+
+\bibitem[Read et~al.(2009)Read, Pfahringer, Holmes, and
+  Frank]{read2009classifier}
+Read, Jesse, Pfahringer, Bernhard, Holmes, Geoff, and Frank, Eibe.
+\newblock Classifier chains for multi-label classification.
+\newblock \emph{Machine Learning and Knowledge Discovery in Databases}, pp.\
+  254--269, 2009.
+
+\bibitem[Sohoney et~al.(2016)Sohoney, Roy, Kaveri, Khare, and
+  Chaoji]{sohoney2016interest}
+Sohoney, Saurabh, Roy, Gourav, Kaveri, Sivaramakrishnan, Khare, Vineet, and
+  Chaoji, Vineet.
+\newblock Scalable clustering for mining interest circles from customer
+  behavior at amazon.
+\newblock In \emph{Amazon Machine Learning Conference}, 2016.
+
+\bibitem[Tsoumakas \& Katakis(2006)Tsoumakas and Katakis]{tsoumakas2006multi}
+Tsoumakas, Grigorios and Katakis, Ioannis.
+\newblock Multi-label classification: An overview.
+\newblock \emph{International Journal of Data Warehousing and Mining},
+  3\penalty0 (3), 2006.
+
+\end{thebibliography}

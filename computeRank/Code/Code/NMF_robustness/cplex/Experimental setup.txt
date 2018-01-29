@@ -1,0 +1,48 @@
+--------------------------
+Experimental setup
+--------------------------
+
+A = M*W + N; 		
+A: m x n,
+M: m x k,
+W: k x n
+Representation: Columns are documents
+
+Data:
+********
+m= , n= , k=
+Noise_level=
+No of iteration for each noise_level: 
+Type: 
+Normalize: (default Rev(Inf,1)norm of N)
+density: 
+
+
+
+HottTopixx
+***********
+Normalize:
+solve lp by : 
+
+SPA:
+******
+Normalize: 
+
+
+XRAY
+******
+Normalize: (default:un-normalized)
+Use: Non-negative Least square solver(NNLS)
+Use: L2 residual error to find M' from A' and W'
+
+LP(rho=1 or 2):
+***************
+use: cplex/linprog/hlpk
+
+UTSVD:
+********
+use: A_non_negative / A
+solve: Inf_1 error /L1 error /L2 error / Rev_Inf_1 error
+
+
+

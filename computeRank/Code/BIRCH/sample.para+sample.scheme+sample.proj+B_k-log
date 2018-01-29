@@ -1,0 +1,455 @@
+Global Parameters:
+CorD	0
+TotalMemSize	779480
+TotalBufferSize	38974
+TotalQueueSize	38974
+TotalOutlierTreeSize	38974
+ntrees	1
+30 240	
+total_attrcnt	30
+total_attrsize	240
+***************Status of sample.para+sample.scheme+sample.proj+B_k-0
+WMflag	0
+W	1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+M	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Dimension	30
+PageSize	520
+MemSize	1499
+BufferSize	74
+QueueSize	74
+OutlierTreeSize	74
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0
+Range	10
+CFDistr	1
+H	0
+Bars	10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c
+K	30
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	0
+CurFt	0
+MemUsed 	0
+TreeSize	0
+PrevEntryCnt	0
+CurrEntryCnt	0
+PrevDataCnt	0
+CurrDataCnt	0
+AvgDensity	0
+NoiseCnt	0
+Ranges	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+SplitBuffer
+Size: 152
+Entry: 0
+Tuple: 0
+
+OutlierQueue
+Size: 152
+Entry: 0
+Tuple: 0
+
+OutlierTree Status
+***************Status of outlier
+Dimension	30
+PageSize	520
+MemSize	74
+BufferSize	0
+QueueSize	0
+OutlierTreeSize	0
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0
+Range	10
+CFDistr	1
+H	0
+K	30
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	0
+CurFt	0
+MemUsed 	0
+TreeSize	0
+PrevEntryCnt	0
+CurrEntryCnt	0
+PrevDataCnt	0
+CurrDataCnt	0
+AvgDensity	0
+NoiseCnt	0
+Ranges	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+******************Init******************
+Init Sys: 0 User: 0 Total: 0 Wall: 0
+
+******************Phase 1***************
+***************Status of sample.para+sample.scheme+sample.proj+B_k-0
+WMflag	0
+W	1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+M	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Dimension	30
+PageSize	520
+MemSize	1499
+BufferSize	74
+QueueSize	74
+OutlierTreeSize	74
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0
+Range	10
+CFDistr	1
+H	0
+Bars	10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c
+K	30
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	11
+CurFt	1.90029
+MemUsed 	1714
+TreeSize	1714
+PrevEntryCnt	641
+CurrEntryCnt	624
+PrevDataCnt	9394
+CurrDataCnt	9394
+AvgDensity	13.7441
+NoiseCnt	584
+Ranges	0.00426 -5.15714 -3.34086 -5.01885 -3.55675 -5.47472 -2.37421 -4.39673 -3.09534 -3.12259 -2.59106 -5.06452 -6.69702 -4.05084 -2.58403 -3.75889 -2.59827 -5.94988 -4.86704 -3.91781 -2.71438 -3.63598 -7.42837 -3.02079 -2.86902 -4.01749 -4.15199 -3.50495 -7.19672 -6.7911 9.83787 4.69415 5.80047 2.20014 3.45689 3.20488 6.45508 2.76033 2.45743 4.26727 5.01401 3.47919 5.11693 3.64839 5.07378 4.77206 12.2692 9.94996 7.07057 4.0996 4.04314 5.0114 4.69975 5.09017 4.5728 3.79662 4.17678 4.33772 4.39206 2.90817 
+Root CF	8810	1.07429	-0.00247459	0.0340044	0.0283698	0.0387133	0.0282062	-0.0270068	-0.000577794	0.0365758	0.0151569	-0.0102689	-0.0144019	-0.00273891	-0.0420491	0.0204756	0.0176921	-0.0377522	0.000157075	0.0261109	-0.00253308	-0.0594304	0.023891	0.00950586	-0.00112959	-0.00713279	-0.0378691	0.0108331	-0.0317675	0.0122476	0.0228442	7.0058	2.4151	3.41566	
+FootPrint	2.4151
+Leaf Nodes	395
+Nonleaf Nodes	1319
+Tree Size	1714
+Tree Depth	37
+Leaf Entries	624
+Nonleaf Entries	1713
+Occupancy	0.681739
+SplitBuffer
+Size: 152
+Entry: 0
+Tuple: 0
+
+OutlierQueue
+Size: 152
+Entry: 0
+Tuple: 0
+
+OutlierTree Status
+***************Status of outlier
+Dimension	30
+PageSize	520
+MemSize	74
+BufferSize	0
+QueueSize	0
+OutlierTreeSize	0
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0
+Range	10
+CFDistr	1
+H	0
+K	30
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	16
+CurFt	4.74233
+MemUsed 	39
+TreeSize	39
+PrevEntryCnt	37
+CurrEntryCnt	13
+PrevDataCnt	439
+CurrDataCnt	584
+AvgDensity	11.8649
+NoiseCnt	0
+Ranges	0.202886 -2.12923 -3.2233 -1.04896 -2.8479 -2.24457 -1.89601 -4.39673 -2.58723 -1.72161 -2.59106 -3.45567 -6.69702 -4.05084 -2.58403 -2.492 -2.03595 -5.94988 -4.86704 -2.6587 -1.54361 -2.9534 -1.72283 -2.41012 -1.98468 -2.16898 -2.47415 -2.99979 -2.26069 -1.02635 6.3826 2.27941 5.80047 2.06283 2.29258 2.45781 4.0994 1.81928 2.45743 4.26727 3.22259 3.47919 3.52873 2.4372 1.38617 4.77206 12.2692 2.74528 7.07057 2.26253 4.04314 5.0114 3.87049 5.09017 3.55132 3.79662 4.17678 1.67678 1.73332 2.32582 
+Root CF	584	2.02395	-0.398022	-0.360593	0.575099	0.112171	0.0511105	0.570796	-0.101021	-0.0778561	0.0671934	0.0992395	0.0369873	0.127219	0.0627156	-0.227454	-0.0751169	0.196253	0.068079	-0.0715059	0.042984	0.055528	0.107921	-0.0330094	-0.0232771	0.0210333	0.0128971	0.0196025	0.037943	-0.0363951	0.0699942	21.4069	4.02066	5.69095	
+FootPrint	4.02066
+Leaf Nodes	10
+Nonleaf Nodes	29
+Tree Size	39
+Tree Depth	8
+Leaf Entries	13
+Nonleaf Entries	38
+Occupancy	0.653846
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+Phase1 Sys: 0 User: 0.12 Total: 0.12 Wall: 0.13
+
+******************Phase 2******************
+***************Status of sample.para+sample.scheme+sample.proj+B_k-0
+WMflag	0
+W	1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+M	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Dimension	30
+PageSize	520
+MemSize	1499
+BufferSize	74
+QueueSize	74
+OutlierTreeSize	74
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0
+Range	10
+CFDistr	1
+H	0
+Bars	10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c
+K	30
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	11
+CurFt	1.90029
+MemUsed 	1714
+TreeSize	1714
+PrevEntryCnt	641
+CurrEntryCnt	624
+PrevDataCnt	9394
+CurrDataCnt	9394
+AvgDensity	13.7441
+NoiseCnt	584
+Ranges	0.00426 -5.15714 -3.34086 -5.01885 -3.55675 -5.47472 -2.37421 -4.39673 -3.09534 -3.12259 -2.59106 -5.06452 -6.69702 -4.05084 -2.58403 -3.75889 -2.59827 -5.94988 -4.86704 -3.91781 -2.71438 -3.63598 -7.42837 -3.02079 -2.86902 -4.01749 -4.15199 -3.50495 -7.19672 -6.7911 9.83787 4.69415 5.80047 2.20014 3.45689 3.20488 6.45508 2.76033 2.45743 4.26727 5.01401 3.47919 5.11693 3.64839 5.07378 4.77206 12.2692 9.94996 7.07057 4.0996 4.04314 5.0114 4.69975 5.09017 4.5728 3.79662 4.17678 4.33772 4.39206 2.90817 
+Root CF	8810	1.07429	-0.00247459	0.0340044	0.0283698	0.0387133	0.0282062	-0.0270068	-0.000577794	0.0365758	0.0151569	-0.0102689	-0.0144019	-0.00273891	-0.0420491	0.0204756	0.0176921	-0.0377522	0.000157075	0.0261109	-0.00253308	-0.0594304	0.023891	0.00950586	-0.00112959	-0.00713279	-0.0378691	0.0108331	-0.0317675	0.0122476	0.0228442	7.0058	2.4151	3.41566	
+FootPrint	2.4151
+Leaf Nodes	395
+Nonleaf Nodes	1319
+Tree Size	1714
+Tree Depth	37
+Leaf Entries	624
+Nonleaf Entries	1713
+Occupancy	0.681739
+SplitBuffer
+Size: 152
+Entry: 0
+Tuple: 0
+
+OutlierQueue
+Size: 152
+Entry: 0
+Tuple: 0
+
+OutlierTree Status
+***************Status of outlier
+Dimension	30
+PageSize	520
+MemSize	74
+BufferSize	0
+QueueSize	0
+OutlierTreeSize	0
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0
+Range	10
+CFDistr	1
+H	0
+K	30
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	16
+CurFt	4.74233
+MemUsed 	39
+TreeSize	39
+PrevEntryCnt	37
+CurrEntryCnt	13
+PrevDataCnt	439
+CurrDataCnt	584
+AvgDensity	11.8649
+NoiseCnt	0
+Ranges	0.202886 -2.12923 -3.2233 -1.04896 -2.8479 -2.24457 -1.89601 -4.39673 -2.58723 -1.72161 -2.59106 -3.45567 -6.69702 -4.05084 -2.58403 -2.492 -2.03595 -5.94988 -4.86704 -2.6587 -1.54361 -2.9534 -1.72283 -2.41012 -1.98468 -2.16898 -2.47415 -2.99979 -2.26069 -1.02635 6.3826 2.27941 5.80047 2.06283 2.29258 2.45781 4.0994 1.81928 2.45743 4.26727 3.22259 3.47919 3.52873 2.4372 1.38617 4.77206 12.2692 2.74528 7.07057 2.26253 4.04314 5.0114 3.87049 5.09017 3.55132 3.79662 4.17678 1.67678 1.73332 2.32582 
+Root CF	584	2.02395	-0.398022	-0.360593	0.575099	0.112171	0.0511105	0.570796	-0.101021	-0.0778561	0.0671934	0.0992395	0.0369873	0.127219	0.0627156	-0.227454	-0.0751169	0.196253	0.068079	-0.0715059	0.042984	0.055528	0.107921	-0.0330094	-0.0232771	0.0210333	0.0128971	0.0196025	0.037943	-0.0363951	0.0699942	21.4069	4.02066	5.69095	
+FootPrint	4.02066
+Leaf Nodes	10
+Nonleaf Nodes	29
+Tree Size	39
+Tree Depth	8
+Leaf Entries	13
+Nonleaf Entries	38
+Occupancy	0.653846
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+Phase2 Sys: 0 User: 0 Total: 0 Wall: 0
+
+******************Phase 3******************
+sample.para+sample.scheme+sample.proj+B_k-0:CurFt<EndFt or K<CurrEntryCnt
+sample.para+sample.scheme+sample.proj+B_k-0:Quality of Phase3 3.13969
+***************Status of sample.para+sample.scheme+sample.proj+B_k-0
+WMflag	0
+W	1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+M	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Dimension	30
+PageSize	520
+MemSize	1499
+BufferSize	74
+QueueSize	74
+OutlierTreeSize	74
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0
+Range	10
+CFDistr	1
+H	0
+Bars	10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c10000x807fa7c
+K	30
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	3
+Pass	11
+CurFt	1.90029
+MemUsed 	0
+TreeSize	1714
+PrevEntryCnt	641
+CurrEntryCnt	30
+PrevDataCnt	9394
+CurrDataCnt	9394
+AvgDensity	13.7441
+NoiseCnt	584
+Ranges	0.00426 -5.15714 -3.34086 -5.01885 -3.55675 -5.47472 -2.37421 -4.39673 -3.09534 -3.12259 -2.59106 -5.06452 -6.69702 -4.05084 -2.58403 -3.75889 -2.59827 -5.94988 -4.86704 -3.91781 -2.71438 -3.63598 -7.42837 -3.02079 -2.86902 -4.01749 -4.15199 -3.50495 -7.19672 -6.7911 9.83787 4.69415 5.80047 2.20014 3.45689 3.20488 6.45508 2.76033 2.45743 4.26727 5.01401 3.47919 5.11693 3.64839 5.07378 4.77206 12.2692 9.94996 7.07057 4.0996 4.04314 5.0114 4.69975 5.09017 4.5728 3.79662 4.17678 4.33772 4.39206 2.90817 
+SplitBuffer
+Size: 152
+Entry: 0
+Tuple: 0
+
+OutlierQueue
+Size: 152
+Entry: 0
+Tuple: 0
+
+OutlierTree Status
+***************Status of outlier
+Dimension	30
+PageSize	520
+MemSize	74
+BufferSize	0
+QueueSize	0
+OutlierTreeSize	0
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0
+Range	10
+CFDistr	1
+H	0
+K	30
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	16
+CurFt	4.74233
+MemUsed 	39
+TreeSize	39
+PrevEntryCnt	37
+CurrEntryCnt	13
+PrevDataCnt	439
+CurrDataCnt	584
+AvgDensity	11.8649
+NoiseCnt	0
+Ranges	0.202886 -2.12923 -3.2233 -1.04896 -2.8479 -2.24457 -1.89601 -4.39673 -2.58723 -1.72161 -2.59106 -3.45567 -6.69702 -4.05084 -2.58403 -2.492 -2.03595 -5.94988 -4.86704 -2.6587 -1.54361 -2.9534 -1.72283 -2.41012 -1.98468 -2.16898 -2.47415 -2.99979 -2.26069 -1.02635 6.3826 2.27941 5.80047 2.06283 2.29258 2.45781 4.0994 1.81928 2.45743 4.26727 3.22259 3.47919 3.52873 2.4372 1.38617 4.77206 12.2692 2.74528 7.07057 2.26253 4.04314 5.0114 3.87049 5.09017 3.55132 3.79662 4.17678 1.67678 1.73332 2.32582 
+Root CF	584	2.02395	-0.398022	-0.360593	0.575099	0.112171	0.0511105	0.570796	-0.101021	-0.0778561	0.0671934	0.0992395	0.0369873	0.127219	0.0627156	-0.227454	-0.0751169	0.196253	0.068079	-0.0715059	0.042984	0.055528	0.107921	-0.0330094	-0.0232771	0.0210333	0.0128971	0.0196025	0.037943	-0.0363951	0.0699942	21.4069	4.02066	5.69095	
+FootPrint	4.02066
+Leaf Nodes	10
+Nonleaf Nodes	29
+Tree Size	39
+Tree Depth	8
+Leaf Entries	13
+Nonleaf Entries	38
+Occupancy	0.653846
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+Phase3 Sys: 0 User: 0.02 Total: 0.02 Wall: 0.03
+
+Phase1-3 Cumulative Timer Sys: 0 User: 0.14 Total: 0.14 Wall: 0.16
+
+******************Phase 4****************
+Phase4 Sys: 0 User: 0 Total: 0 Wall: 0
+
+Phase1-4 Cumulative Timer Sys: 0 User: 0.14 Total: 0.14 Wall: 0.16
+

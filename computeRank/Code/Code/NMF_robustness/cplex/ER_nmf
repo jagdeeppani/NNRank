@@ -1,0 +1,15 @@
+clear all;
+close all;
+% Ellipsoid Rounding implementation
+% Input A,k,rho, rows of A contains documents
+
+noise_level=0.1;
+I=[];
+while (length(I)<k)
+    I= ER_routine(A,rho);
+    rho=rho+1;
+end
+
+anchor_index=spa(A(:,I),noise_level,k);
+
+
