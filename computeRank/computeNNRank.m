@@ -14,10 +14,11 @@ thresh1 = zeros(1,d);
 thresh2 = zeros(1,d);
 threshQ = zeros(1,d);
 
-interval=int16(floor(n/s));
-
+interval=int16(floor(n/double(s)));
+%fprintf('interval = %d \n',interval);
 for j = 1:s
     a(:,j) = sum(A_sorted(:,(j-1)*interval+1:(j*interval)),2);
+    b=j;
 end    
 
 for word = 1:d
@@ -43,7 +44,6 @@ for i=1:d
     dpw(i) = length(W{i});   % # of docs per word i
 end
 
-
 [dpw_val,dpw_idx] = sort(dpw,'ascend');
 dpw_id = find(dpw_val,1);           % Removing zero rows
 
@@ -54,9 +54,11 @@ l1=1;
 lc=0; % Counter to track the number of words being removed from R
 Li_ln = zeros(w,1);
 lR=length(R);
-ub_t=tolerance;
+ub_t=0;
+qi_lowerlim = tolerance;
 %fprintf('while loop started with lR = %d \n',lR);
 
+% Step3 pruning starts from here.
 while l1 <= lR-1
     i = R(l1);
     Li = W{i};
@@ -64,7 +66,7 @@ while l1 <= lR-1
     l2=l1+1;
     ub = dpw(i)+ub_t;
    %fprintf('Li length is %d \n',Li_ln(i));
-    if (Li_ln(i) > 2*tolerance)
+    if (Li_ln(i) > qi_lowerlim)
         while (l2 <= lR)
             id = R(l2);
             
@@ -94,8 +96,14 @@ while l1 <= lR-1
 end
 
 
+%csvwrite('tsvdOutput/R_vec.csv',R);
 % The new binary data matrix is A_filtered. This is expected to have fewer rows than the original matrix A.
 A_filtered = double(Q_mat(R,:));
+%singularVals=zeros(100,2);
+%singularVals(:,1) = svds(A,100);
+%singularVals(:,2) = svds(A_filtered,100);
+%csvwrite('singularVals_Qmat.csv',singularVals);
+
 intersectionMat = A_filtered * A_filtered';
 adjacencyMat = intersectionMat >= edgeThreshold;
 G = graph(adjacencyMat);
