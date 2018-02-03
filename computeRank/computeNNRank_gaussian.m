@@ -1,7 +1,7 @@
 d = 1000;       %Number of words or the dimension
 n = 2000;      %Number of documents or data points
 k=20;           %Number of topics or latent factors
-etta0= 0.1 ;
+etta0= 0.1;     % Total mass of catchwords in topic
 etta2= 1/(2*k);
 normalize=  0; %normalize =0 implies element-wise Gaussian noise with sigma = 2*beta*sqrt(n)*B_il. normalize =2 implies column-wise Gaussian noise with l2 norm comparable to data.
 c = 5;
@@ -10,15 +10,15 @@ m=50;
 
 %s_arr = [75,80,85,90,95,100,105,110,115];
 %s_arr = [50,100,150,200,250,300,350];
-s_arr  = linspace(100,140,9);
-gamma_arr = [0.5];
+s_arr  = linspace(100,300,3);
+gamma_arr = [0.4,0.5,0.6];
 edgeThreshold_arr = [5];
 tolerance_arr = [5];
 
-noise_arr=[5] *0.001118;
+noise_arr = [1,3,5] * 0.001118;
 allNoise = cell(1,length(noise_arr));
 fprintf('Total number of parameter configs is %d\n', length(s_arr)*length(gamma_arr)*length(edgeThreshold_arr)*length(tolerance_arr));
-num_samples = 10;
+num_samples = 1;
 
 for noise_idx=1:length(noise_arr)
     allConfig = zeros(num_samples,7);
@@ -47,7 +47,7 @@ for noise_idx=1:length(noise_arr)
                         edgeThreshold=3*(n/s);
                         [lc, k1] = computeNNRank(A, gamma, s,tolerance,edgeThreshold);
                         rankMat(s_idx,gamma_idx) = k1;
-                        fprintf('done for s=%f, gamma=%f , tolerance =%d, edgeThreshold=%f with lc= %d, k=%d\n',s,gamma,tolerance,edgeThreshold,lc,k1);   
+                        fprintf('Done s:%.0f, beta:%.4f, gamma:%.2f, tol:%.2f, edgeThr:%.2f, lc:%d, k:%d, k_out:%d\n',s,beta,gamma,tolerance,edgeThreshold,lc,k,k1);   
                         %if k1>=(0.9*k) && k1<=(1.1*k)
                         allConfig(j,:) = [sample_idx, s, gamma, tolerance, edgeThreshold, k1,lc ];
                         j=j+1;
