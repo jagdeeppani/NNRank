@@ -1,21 +1,21 @@
 
 %Parameter initializations
-d = 1000;       %Number of words or the dimension
-n = 10000;      %Number of documents or data points
-k=20;           %Number of topics or latent factors
-etta0= 0.1;     %Total mass of catchwords in topic
-etta2= 1/(5*k);
-
-normalize=  0; %normalize =0 implies element-wise Gaussian noise with sigma = 2*beta*sqrt(n)*B_il. normalize =2 implies column-wise Gaussian noise with l2 norm comparable to data.
-c = 5;
-s_arr  = linspace(400,400,1);
-gamma_arr  = linspace(0.4,0.4,1);
+d = 5000;        %Number of words or the dimension
+n = 10000;       %Number of documents or data points
+k = 100;         %Number of topics or latent factors
+eta0 = 0.05;     %Total mass of catchwords in topic
+eta2 = 1/(1*k);  %Dirichlet parameter for C (in A~BC+N)
+c = 20;          %number of catchwords per topic
+s_arr = linspace(400,400,1);
+gamma_arr = linspace(0.4,0.4,1);
 edgeThreshold_arr = [3];
 tolerance_arr = [2];
+noise_arr=linspace(0,0.15,4);   %Computing rank for each configuration
 
+%normalize = 0 implies element-wise Gaussian noise with sigma = 2*beta*sqrt(n)*B_il.
+%normalize = 2 implies column-wise Gaussian noise with l2 norm comparable to data.
+normalize = 0;
 
-%Computing rank for each configuration
-noise_arr=linspace(0,0.16,9);
 
 allNoise = cell(1,length(noise_arr));
 fprintf('Total number of parameter configs is %d\n', length(s_arr)*length(gamma_arr)*length(edgeThreshold_arr)*length(tolerance_arr));
@@ -24,11 +24,10 @@ num_samples = 1;
 for noise_idx=1:length(noise_arr)
     allConfig = zeros(num_samples,7);
     beta=noise_arr(noise_idx);
-    fprintf('Noise is %f\n', beta);
     j=1;
     for sample_idx =1:num_samples
         rankMat = zeros(length(s_arr),length(gamma_arr));
-        [A,A_orig,B,C,permute_vect] = generate_synthetic(d,n,k,c,etta0,etta2,beta,normalize);
+        [A,A_orig,B,C,permute_vect] = generate_synthetic_with_head(d,n,k,c,eta0,eta2,beta,normalize);
         %[A,A_orig,B,C,permute_vect] = generate_dominant_multinomial(d,n,k,c,etta0,etta2,m);
         for s_idx=1:length(s_arr)
             s = s_arr(s_idx);
@@ -45,7 +44,7 @@ for noise_idx=1:length(noise_arr)
                         edgeThreshold=edgeThreshold_arr(edgeThreshold_idx)*(n/s);
                         [lc, k1] = computeNNRank(A, gamma, s,tolerance,edgeThreshold);
                         rankMat(s_idx,gamma_idx) = k1;
-                        fprintf('Done s:%.0f, beta:%.4f, gamma:%.2f, tol:%.2f, edgeThr:%.2f, lc:%d, k:%d, k_out:%d\n',s,beta,gamma,tolerance,edgeThreshold,lc,k,k1);   
+                        fprintf('Done k:%d, k_out:%d, s:%.0f, beta:%.4f, gamma:%.2f, eta2:%.3f, tol:%.2f, edgeThr:%.2f, lc:%d\n',k,k1,s,beta,gamma,eta2,tolerance,edgeThreshold,lc);   
                         %if k1>=(0.9*k) && k1<=(1.1*k)
                         allConfig(j,:) = [sample_idx, s, gamma, tolerance, edgeThreshold, k1,lc ];
                         j=j+1;
@@ -56,7 +55,7 @@ for noise_idx=1:length(noise_arr)
         end    
     end
 allNoise{noise_idx}=allConfig;
-fprintf('median k=%d\n',median(allConfig(:,6)));
+%fprintf('median k=%d\n',median(allConfig(:,6)));
 end
 
 

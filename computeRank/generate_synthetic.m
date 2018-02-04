@@ -1,4 +1,4 @@
-function [A,A_orig,M,W,permute_vect] = generate_synthetic(d,n,k,c,etta0,etta2,beta,normalize)
+function [A,A_orig,M,W,permute_vect] = generate_synthetic(d,n,k,c,eta0,eta2,beta,normalize)
 % A = M * W + N;
 
 M = zeros(d,k);
@@ -8,13 +8,12 @@ for i=1:k
     alpha = ones(d,1);
     start_ind = c*(i-1) + 1;
     end_ind = c*i;
-    scaling_factor = ((d-c)*etta0)/(c*(1-etta0));
-    alpha(start_ind:end_ind)=alpha(start_ind:end_ind) * scaling_factor; 
+    scaling_factor = ((d-c)*eta0)/(c*(1-eta0));
+    alpha(start_ind:end_ind) = alpha(start_ind:end_ind) * scaling_factor; 
     M(:,i) = sample_dirichlet(alpha,1)';
-    
 end
 
-W = sample_dirichlet(etta2*ones(k,1),n); W=W';
+W = sample_dirichlet(eta2*ones(k,1),n); W=W';
 A_orig = M * W;
 
 %Adding noise 
@@ -70,8 +69,8 @@ M = M(permute_vect,:);
 %csvwrite('/home/local/ANT/pjagdeep/temp/A_mat.csv',A);
 %csvwrite('/home/local/ANT/pjagdeep/temp/A_orig_mat.csv',A_orig);
 
-fprintf('Synthetic data generated in %d secs\n',toc);
-fprintf('Rank of M is %d \n',rank(M));
+%fprintf('Synthetic data generated in %d secs\n',toc);
+%fprintf('Rank of M is %d \n',rank(M));
 end
 
 
